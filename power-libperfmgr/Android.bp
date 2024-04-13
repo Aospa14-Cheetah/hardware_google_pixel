@@ -44,7 +44,6 @@ cc_library_headers {
 
 cc_test {
     name: "libadpf_test",
-    defaults: ["android.hardware.power-ndk_static"],
     proprietary: true,
     vendor: true,
     require_root: true,
@@ -79,7 +78,6 @@ cc_test {
 
 cc_binary {
     name: "android.hardware.power-service.pixel-libperfmgr",
-    defaults: ["android.hardware.power-ndk_shared"],
     relative_install_path: "hw",
     init_rc: ["aidl/android.hardware.power-service.pixel-libperfmgr.rc"],
     vintf_fragments: ["aidl/android.hardware.power-service.pixel.xml"],
@@ -111,7 +109,6 @@ cc_binary {
 
 cc_binary {
     name: "sendhint",
-    defaults: ["android.hardware.power-ndk_shared"],
     vendor: true,
     shared_libs: [
         "libbase",
